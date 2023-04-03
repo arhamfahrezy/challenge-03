@@ -7,7 +7,7 @@ function Home() {
   return (
     <Container className="mt-2">
       <CompSearch/>
-      <ToDoSearch />
+      <ToDoSearch/>
     </Container>
   );
 }

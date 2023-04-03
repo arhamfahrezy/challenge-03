@@ -26,10 +26,7 @@ function ToDoSearch() {
     e.preventDefault();
     setFilter("All");
     setFilterSearch(e.target["search"].value);
-    // console.dir(e.target["search"].value);
-    // setFilterSearch(e.target.value.toLowerCase());
   };
-  // console.log(items);
 
   const deleteAllDone = (e) => {
     e.preventDefault();
@@ -53,7 +50,6 @@ function ToDoSearch() {
       <h2 className="text-center mb-4">
         <b>To-Do Search</b>
       </h2>
-      {/* diluar perlu Row Col ga ya? */}
       <Row className="mb-4">
         <Col>
           <Card>
@@ -63,7 +59,7 @@ function ToDoSearch() {
                   <Form onSubmit={onSearch}>
                     <InputGroup className="mb-3">
                       <InputGroup.Text id="basic-addon1">
-                        <FaSearch /> {/* icon search */}
+                        <FaSearch />
                       </InputGroup.Text>
                       <Form.Control
                         type="text"
