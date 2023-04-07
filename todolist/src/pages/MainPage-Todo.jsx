@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Container, Row, Col, Table, InputGroup, Form, Button, Card,
 } from "react-bootstrap";
-import { FaSearch } from "react-icons/fa";
+import { ImSearch } from "react-icons/im";
 import ToDoItem from "../components/CompItem";
 import todoData from "../list/data.json";
 
@@ -53,13 +53,13 @@ function ToDoSearch() {
       <Row className="mb-4">
         <Col>
           <Card>
-            <Card.Body>
+            <Card.Body >
               <Row>
                 <Col sm={8}>
-                  <Form onSubmit={onSearch}>
-                    <InputGroup className="mb-3">
+                  <Form onSubmit={onSearch} >
+                    <InputGroup className="mb-4">
                       <InputGroup.Text id="basic-addon1">
-                        <FaSearch />
+                        <ImSearch />
                       </InputGroup.Text>
                       <Form.Control
                         type="text"
@@ -73,7 +73,7 @@ function ToDoSearch() {
                       />
                     </InputGroup>
                     <div className="d-grid gap-2">
-                      <Button variant="primary" type="submit">
+                      <Button variant="info" type="submit" >
                         Search
                       </Button>
                     </div>
@@ -85,7 +85,7 @@ function ToDoSearch() {
                 >
                   <Button
                     as={Link}
-                    variant="primary"
+                    variant="info"
                     to="/todo-input"
                     style={{ width: "12rem" }}
                   >
@@ -102,6 +102,7 @@ function ToDoSearch() {
         <Col>
           <div className="d-grid gap-2">
             <Button
+              variant="info"
               onClick={() => {
                 setFilter("All");
               }}
@@ -113,6 +114,7 @@ function ToDoSearch() {
         <Col>
           <div className="d-grid gap-2">
             <Button
+              variant="info"
               onClick={() => {
                 setFilter("Done");
               }}
@@ -124,6 +126,7 @@ function ToDoSearch() {
         <Col>
           <div className="d-grid gap-2">
             <Button
+              variant="info"
               onClick={() => {
                 setFilter("Todo");
               }}

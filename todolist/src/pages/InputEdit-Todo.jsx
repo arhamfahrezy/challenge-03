@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Card, Button, InputGroup, Form,
 } from "react-bootstrap";
-import { FaBook } from "react-icons/fa";
+import { ImBook } from "react-icons/im";
 import { useNavigate } from "react-router-dom";
 import todoData from "../list/data.json";
 
@@ -25,7 +25,7 @@ function ToDoInput() {
   return (
     <Container className="mt-4">
       <h2 className="text-center mb-4">
-        <b>TodoInput</b>
+        <b>Todo-Input</b>
       </h2>
       
       <Row className="mb-4">
@@ -35,7 +35,7 @@ function ToDoInput() {
               <Form onSubmit={onSubmit} action="/todoList">
                 <InputGroup className="mb-3" controlId="task">
                   <InputGroup.Text id="basic-addon1">
-                    <FaBook /> 
+                    <ImBook /> 
                   </InputGroup.Text>
                   <Form.Control
                     placeholder="Input/Edit Todo"
@@ -52,7 +52,7 @@ function ToDoInput() {
                   )}
                 </InputGroup>
                 <div className="d-grid gap-2">
-                  <Button variant="primary" type="submit">
+                  <Button variant="info" type="submit">
                     Submit
                   </Button>
                 </div>

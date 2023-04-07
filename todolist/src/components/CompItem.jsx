@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Form } from "react-bootstrap";
-import { FaTrash, FaEdit } from "react-icons/fa";
+import { FaTrashAlt } from "react-icons/fa";
+import { MdEditSquare } from "react-icons/md";
 
 function ToDoItem({ toDo, toggleCompleted }) {
   return (
@@ -13,7 +14,7 @@ function ToDoItem({ toDo, toggleCompleted }) {
         )}
       </td>
       <td className="d-flex justify-content-end">
-        <Button className="ms-4">
+        <Button variant="outlined" className="ms-4">
           <Form.Check.Input
             isValid
             value={toDo.id}
@@ -21,11 +22,11 @@ function ToDoItem({ toDo, toggleCompleted }) {
             onChange={toggleCompleted}
           />
         </Button>
-        <Button variant="warning" className="ms-4">
-          <FaEdit style={{ color: "white" }} />
+        <Button variant="outlined" className="ms-4">
+          <MdEditSquare style={{ color: "yellow" }} />
         </Button>
-        <Button variant="danger" className="ms-4">
-          <FaTrash />
+        <Button variant="outlined" className="ms-4">
+          <FaTrashAlt style={{ color: "red" }}/>
         </Button>
       </td>
     </tr>
